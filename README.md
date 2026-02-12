@@ -96,6 +96,8 @@ pdf_compressor/
 │
 └── README.md                 # This file
 
+---
+
 
 ## 📬 Contact
 
