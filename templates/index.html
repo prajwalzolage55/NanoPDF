@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+
+{% block title %}PDF Compressor{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-lg-10">
+    <form action="{{ url_for('compress') }}" method="POST" enctype="multipart/form-data" novalidate>
+      <div class="row g-4">
+
+        <!-- Left box: Upload -->
+        <div class="col-md-6">
+          <div class="card shadow-lg border-0 rounded-4 h-100">
+            <div class="card-body p-4 d-flex flex-column">
+
+              <h5 class="fw-bold mb-3">1. Upload PDF</h5>
+
+              <!-- Upload dropzone (click anywhere to open file chooser) -->
+              <div class="upload-dropzone mb-3 position-relative">
+                <!-- visible icon/text -->
+                <div class="dz-icon">📁</div>
+                <p class="mb-1">Click here or drag & drop (optional) to select a PDF file</p>
+                <small class="text-muted">Only .pdf — max 10 MB</small>
+
+                <!-- Actual file input (transparent overlay) -->
+                <input
+                  type="file"
+                  id="fileInput"
+                  name="file"
+                  accept="application/pdf"
+                  required
+                >
+              </div>
+
+              <!-- File info area (filled by main.js) -->
+              <div class="file-info"></div>
+
+              <div class="mt-auto note">
+                <small>
+                  After selecting a file, choose compression options on the right and press Compress.
+                </small>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Right box: Compression options + submit -->
+        <div class="col-md-6">
+          <div class="card shadow-lg border-0 rounded-4 h-100">
+            <div class="card-body p-4 d-flex flex-column">
+
+              <h5 class="fw-bold mb-3">2. Compression & Download</h5>
+
+              <!-- Compression level -->
+              <label class="form-label fw-semibold">Compression Level</label>
+              <select name="compression_level" class="form-select mb-3" aria-label="Compression level">
+                <option value="low">Low — better quality</option>
+                <option value="medium" selected>Medium — balanced</option>
+                <option value="high">High — maximum compression</option>
+              </select>
+
+              <!-- Optional: Keep original toggle (if you implement) -->
+              <!-- <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" value="1" id="keepOriginal" name="keep_original">
+                <label class="form-check-label" for="keepOriginal">Keep original file on server</label>
+              </div> -->
+
+              <!-- Action buttons -->
+              <div class="d-grid gap-2 mt-auto">
+                <button type="submit" class="btn btn-primary btn-lg">
+                  Compress PDF
+                </button>
+
+                <button type="button" class="btn btn-outline-primary" id="clearSelection">
+                  Clear Selection
+                </button>
+              </div>
+
+              <!-- small powered badge -->
+              <div class="mt-3 text-center">
+                <span class="powered-pill">Fast • Secure • Local</span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Small inline script to wire the Clear button (lightweight; will not conflict with main.js) -->
+<script>
+  (function () {
+    const clearBtn = document.getElementById('clearSelection');
+    const fileInput = document.getElementById('fileInput');
+    if (clearBtn && fileInput) {
+      clearBtn.addEventListener('click', function () {
+        fileInput.value = '';
+        const fi = document.querySelector('.file-info');
+        if (fi) fi.innerHTML = '';
+      });
+    }
+  })();
+</script>
+
+{% endblock %}

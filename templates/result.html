@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+{% block title %}Result - PDF Compressor{% endblock %}
+
+{% block content %}
+
+<div class="row justify-content-center">
+    <div class="col-md-7">
+
+        <div class="card shadow-lg border-0 rounded-4">
+            <div class="card-body p-5 text-center">
+
+                <!-- Success Icon -->
+                <div class="mb-4">
+                    <h1 class="display-4 text-success">✓</h1>
+                </div>
+
+                <!-- Title -->
+                <h3 class="fw-bold mb-4">
+                    PDF Compressed Successfully!
+                </h3>
+
+                <!-- File Info -->
+                <div class="mb-4">
+
+                    <p class="mb-2">
+                        <strong>Original File:</strong> {{ original_file }}
+                    </p>
+
+                    <p class="mb-2">
+                        <strong>Original Size:</strong> 
+                        {{ original_size }} KB
+                    </p>
+
+                    <p class="mb-2">
+                        <strong>Compressed Size:</strong> 
+                        {{ compressed_size }} KB
+                    </p>
+
+                    <p class="mb-2 text-success fw-semibold">
+                        Size Reduced By: {{ reduction }} %
+                    </p>
+
+                </div>
+
+                <!-- Buttons -->
+                <div class="d-grid gap-3">
+
+                    <a href="{{ url_for('download', filename=compressed_file) }}"
+                       class="btn btn-success btn-lg rounded-3">
+                        Download Compressed PDF
+                    </a>
+
+                    <a href="{{ url_for('index') }}"
+                       class="btn btn-outline-primary rounded-3">
+                        Compress Another File
+                    </a>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,6 @@
+Flask==3.1.2
+pikepdf==10.3.0
+pypdf==6.7.0
+Pillow==12.1.1
+python-dotenv==1.2.1
+gunicorn==25.0.3

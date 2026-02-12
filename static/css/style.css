@@ -1,0 +1,294 @@
+/* style.css
+   Professional black/grey theme – clean, minimal, high contrast
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --bg-body: #0a0a0a;
+  --bg-card: #1a1a1a;
+  --bg-input: #252525;
+  --bg-hover: #2a2a2a;
+  --border-color: #333333;
+  --text-primary: #f0f0f0;
+  --text-secondary: #b0b0b0;
+  --text-muted: #888888;
+  --accent-grey: #3a3a3a;
+  --shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-color: var(--bg-body);
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+/* Container spacing */
+.container.py-5 {
+  padding-top: 4rem !important;
+  padding-bottom: 2rem !important;
+}
+
+/* Navbar – solid dark */
+.navbar.bg-dark {
+  background-color: #0d0d0d !important;
+  border-bottom: 1px solid #2a2a2a;
+}
+.navbar-brand {
+  color: #ffffff !important;
+  letter-spacing: -0.02em;
+}
+
+/* Cards – subtle grey, soft shadow */
+.card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.card:hover {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.8);
+}
+.card-body {
+  color: var(--text-primary);
+  padding: 2rem;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+h5.fw-bold {
+  color: #ffffff;
+  border-bottom: 1px solid #333;
+  padding-bottom: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+/* Upload dropzone – minimal dashed border */
+.upload-dropzone {
+  border: 2px dashed #444;
+  border-radius: 10px;
+  padding: 32px 24px;
+  text-align: center;
+  background-color: #151515;
+  transition: border-color 0.2s, background-color 0.2s;
+  position: relative;
+}
+.upload-dropzone:hover {
+  border-color: #777;
+  background-color: #1e1e1e;
+}
+.upload-dropzone .dz-icon {
+  font-size: 40px;
+  display: block;
+  margin-bottom: 12px;
+  color: #aaa;
+}
+.upload-dropzone p {
+  color: #ddd;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+.upload-dropzone small {
+  color: #888;
+}
+input[type="file"] {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* File info badges */
+.file-info {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+.file-info .badge {
+  background: #2a2a2a;
+  color: #e0e0e0;
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-weight: 500;
+  border: 1px solid #444;
+  font-size: 0.9rem;
+}
+
+/* Form elements – clean dark */
+.form-label {
+  color: #ccc;
+  font-weight: 500;
+}
+.form-select, .form-control {
+  background-color: #1e1e1e;
+  border: 1px solid #3a3a3a;
+  border-radius: 8px;
+  color: #f0f0f0;
+  padding: 10px 16px;
+  transition: border-color 0.15s, background-color 0.15s;
+}
+.form-select:focus, .form-control:focus {
+  background-color: #252525;
+  border-color: #777;
+  box-shadow: none;
+  outline: none;
+}
+.form-select option {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+/* Buttons – monochrome, solid */
+.btn {
+  border-radius: 8px;
+  font-weight: 600;
+  padding: 12px 20px;
+  transition: all 0.15s ease;
+}
+.btn-primary {
+  background-color: #2c2c2c;
+  border: 1px solid #4a4a4a;
+  color: white;
+}
+.btn-primary:hover, .btn-primary:focus {
+  background-color: #3a3a3a;
+  border-color: #666;
+  transform: translateY(-1px);
+}
+.btn-outline-primary {
+  background: transparent;
+  border: 1px solid #5a5a5a;
+  color: #ddd;
+}
+.btn-outline-primary:hover {
+  background: #2a2a2a;
+  border-color: #777;
+  color: white;
+}
+.btn-success {
+  background-color: #1e3a2a;
+  border: 1px solid #2d6a4f;
+  color: white;
+}
+.btn-success:hover {
+  background-color: #2d6a4f;
+  border-color: #40916c;
+}
+.btn:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Result page – success icon */
+.display-4.text-success {
+  color: #58a86b !important;
+  font-size: 4rem;
+  text-shadow: none;
+}
+.text-success {
+  color: #6c9 !important;
+}
+
+/* Error page icon */
+.display-4.text-danger {
+  color: #b33 !important;
+}
+
+/* Flash messages */
+.alert {
+  background-color: #1e1e1e;
+  border: 1px solid #4a4a4a;
+  color: #e0e0e0;
+  border-radius: 8px;
+}
+.alert-danger {
+  background-color: #2c1a1a;
+  border-color: #a33;
+}
+.btn-close {
+  filter: invert(1) grayscale(1) brightness(2);
+}
+
+/* Footer */
+footer.border-top {
+  border-color: #2a2a2a !important;
+}
+.text-secondary {
+  color: #aaa !important;
+}
+
+/* Powered pill – subtle */
+.powered-pill {
+  display: inline-block;
+  background: #1e1e1e;
+  color: #aaa;
+  padding: 6px 14px;
+  border-radius: 40px;
+  font-size: 0.8rem;
+  border: 1px solid #3a3a3a;
+}
+
+/* Processing indicator – grey dots */
+.processing-note {
+  color: #aaa !important;
+  font-style: italic;
+}
+.processing-dots {
+  display: inline-block;
+  height: 6px;
+  width: 40px;
+  position: relative;
+}
+.processing-dots::before,
+.processing-dots::after,
+.processing-dots span {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #aaa;
+  position: absolute;
+  top: 0;
+  animation: bounce 1s infinite ease-in-out;
+}
+.processing-dots::before { left: 0; animation-delay: 0s; }
+.processing-dots span { left: 17px; animation-delay: 0.12s; }
+.processing-dots::after { right: 0; animation-delay: 0.24s; }
+@keyframes bounce {
+  0%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-6px); }
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .card-body { padding: 1.5rem; }
+  .upload-dropzone { padding: 24px; }
+}
+
+/* Helper classes */
+.note {
+  color: #aaa;
+  font-size: 0.9rem;
+}

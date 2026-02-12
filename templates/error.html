@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}Error - PDF Compressor{% endblock %}
+
+{% block content %}
+
+<div class="row justify-content-center">
+    <div class="col-md-6">
+
+        <div class="card shadow-lg border-0 rounded-4 text-center">
+            <div class="card-body p-5">
+
+                <!-- Error Icon -->
+                <div class="mb-4">
+                    <h1 class="display-4 text-danger">⚠</h1>
+                </div>
+
+                <!-- Error Title -->
+                <h3 class="fw-bold mb-3">
+                    {{ error_title if error_title else "Something Went Wrong" }}
+                </h3>
+
+                <!-- Error Message -->
+                <p class="text-muted mb-4">
+                    {{ error_message if error_message else 
+                       "An unexpected error occurred. Please try again." }}
+                </p>
+
+                <!-- Back Button -->
+                <a href="{{ url_for('index') }}"
+                   class="btn btn-primary rounded-3 px-4">
+                    Go Back to Home
+                </a>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}
