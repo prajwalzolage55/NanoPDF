@@ -19,7 +19,6 @@
 - [About NanoPDF](#-about-nanopdf)
 - [Features](#-features)
 - [Tech Stack](#-tech-stack)
-- [Local Setup](#-local-setup)
 - [Project Structure](#-project-structure)
 - [Contact](#-contact)
 
@@ -68,25 +67,9 @@ NanoPDF is a **minimalist, high-performance PDF compression web application**. I
 
 ---
 
-## 🛠 Local Setup
-
-Follow these steps to run NanoPDF on your own machine.
-
-### Prerequisites
-- Python 3.10 or higher
-- Git
-- (Optional) Virtual environment
-
-### Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/prajwalzolage55/nanopdf.git
-   cd nanopdf
-
-   ## 📬 Contact
 
 
+## 📬 Contact
 
 **Prajwal Ashok Zolage**
 
