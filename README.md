@@ -2,7 +2,6 @@
 
 <div align="center">
 
-![NanoPDF Banner](https://via.placeholder.com/800x200/1a1a1a/ffffff?text=NanoPDF+Compressor)
 
 **⚡ Fast · 🔒 Secure · 🎯 Lightweight**
 
