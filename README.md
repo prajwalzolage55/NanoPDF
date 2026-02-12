@@ -67,36 +67,6 @@ NanoPDF is a **minimalist, high-performance PDF compression web application**. I
 
 ---
 
-## Project Structure
-
-pdf_compressor/
-│
-├── app.py
-├── config.py
-├── requirements.txt
-│
-├── static/
-│   ├── css/
-│   │   └── style.css          # Professional black/grey theme
-│   ├── js/
-│   │   └── main.js            # File validation, UI logic
-│   └── uploads/
-│       ├── original/          # Temporary storage for uploaded files
-│       └── compressed/        # Temporary storage for compressed files
-│
-├── templates/
-│   ├── base.html             # Layout with navbar/footer
-│   ├── index.html            # Upload & compression form
-│   ├── result.html           # Success screen with download
-│   └── error.html            # Error page
-│
-├── utils/
-│   ├── pdf_compressor.py     # PDF compression logic
-│   └── file_handler.py       # File management (save, delete, naming)
-│
-└── README.md                 # This file
-
----
 
 
 ## 📬 Contact
