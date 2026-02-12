@@ -220,4 +220,7 @@ if __name__ == '__main__':
     if max_size:
         app.config['MAX_CONTENT_LENGTH'] = max_size
 
-    app.run(debug=True)
+    host = os.getenv('FLASK_HOST', '0.0.0.0')
+    port = int(os.getenv('PORT', 5000))
+    debug = os.getenv('FLASK_DEBUG', 'True').lower() == 'true'
+    app.run(host=host, port=port, debug=debug)
