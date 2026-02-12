@@ -77,24 +77,24 @@ pdf_compressor/
 │
 ├── static/
 │   ├── css/
-│   │   └── style.css
+│   │   └── style.css          # Professional black/grey theme
 │   ├── js/
-│   │   └── main.js
+│   │   └── main.js            # File validation, UI logic
 │   └── uploads/
-│       ├── original/
-│       └── compressed/
+│       ├── original/          # Temporary storage for uploaded files
+│       └── compressed/        # Temporary storage for compressed files
 │
 ├── templates/
-│   ├── base.html
-│   ├── index.html
-│   ├── result.html
-│   └── error.html
+│   ├── base.html             # Layout with navbar/footer
+│   ├── index.html            # Upload & compression form
+│   ├── result.html           # Success screen with download
+│   └── error.html            # Error page
 │
 ├── utils/
-│   ├── pdf_compressor.py
-│   └── file_handler.py
+│   ├── pdf_compressor.py     # PDF compression logic
+│   └── file_handler.py       # File management (save, delete, naming)
 │
-└── README.md
+└── README.md                 # This file
 
 
 ## 📬 Contact
