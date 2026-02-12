@@ -20,12 +20,7 @@
 - [Features](#-features)
 - [Tech Stack](#-tech-stack)
 - [Local Setup](#-local-setup)
-- [Usage](#-usage)
-- [API Reference](#-api-reference)
-- [Deployment](#-deployment)
 - [Project Structure](#-project-structure)
-- [Roadmap](#-roadmap)
-- [License](#-license)
 - [Contact](#-contact)
 
 ---
@@ -88,3 +83,15 @@ Follow these steps to run NanoPDF on your own machine.
    ```bash
    git clone https://github.com/prajwalzolage55/nanopdf.git
    cd nanopdf
+
+   ## 📬 Contact
+
+
+
+**Prajwal Ashok Zolage**
+
+- 📧 **Email**: [prajwalzolage55@gmail.com](mailto:prajwalzolage55@gmail.com)
+- 📸 **Instagram**: [@prajwal__0506](https://www.instagram.com/prajwal__0506?igsh=aHo4eWUzejd6dmhj)
+- 💻 **GitHub**: [prajwalzolage55](https://github.com/prajwalzolage55)
+
+**Project Link**: [https://github.com/prajwalzolage55/nanopdf](https://github.com/prajwalzolage55/nanopdf)
